@@ -5,33 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/caa5e76433.js" crossorigin="anonymous"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> -->
 
   <link href="./output.css" rel="stylesheet">
 </head>
 <body class="bg-black">
 
   <!-- header and nav section -->
-   <div class="border-b-2 border-gray">
+   <div class="border-b-2 border-gray relative z-10 ">
     <header class="max-w-[1250px] mx-auto">
       <!-- header container -->
       <div class="pl-[5%] pr-[5%]">
         <!-- header-flex container -->
         <div class="flex justify-between items-center py-4 text-white  md:py-7">
           <!-- logo -->
-           <a href="./index.html"><img src="./images/Paymon Logo.svg" alt=""></a>
-           <!-- nav-links -->
-          <ul class="hidden text-xs lg:flex gap-14">
-            <li><a href="./company.html">Company</a></li>
-            <li><a href="./pricing.html">Pricing</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="#">Contact Us</a></li>
+          <a href="./index.html"><img src="./images/Paymon Logo.svg" alt="Paymon Logo"></a>
+          <!-- nav-links (desktop) -->
+          <ul class="hidden lg:flex gap-14 text-2xl">
+            <li><a class="text-3xl lg:text-sm" href="./company.html">Company</a></li>
+            <li><a class="text-3xl lg:text-sm" href="./pricing.html">Pricing</a></li>
+            <li><a class="text-3xl lg:text-sm" href="./blog.html">Blog</a></li>
+            <li><a class="text-3xl lg:text-sm" href="#">Contact Us</a></li>
           </ul>
-          <!--  -->
-          <a class="p-2 px-4 bg-transparent rounded-full border border-gray" href="#"><span class="text-lg inline-block rotate-90">&#10148</span> Get Paymon</a>
+          <!-- CTA button (desktop) -->
+          <a class="hidden lg:inline-block p-2 px-4 bg-transparent rounded-full border border-gray" href="#"><span class="text-lg inline-block rotate-90">&#10148</span> Get Paymon</a>
+          <!-- Hamburger (mobile) -->
+          <button id="hamburgerBtn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none" aria-label="Open menu">
+            <span class="block w-8 h-1 bg-yellow-700 mb-1 rounded transition-all duration-300"></span>
+            <span class="block w-8 h-1 bg-red-700 mb-1 rounded transition-all duration-300"></span>
+            <span class="block w-8 h-1 bg-blue-700 rounded transition-all duration-300"></span>
+          </button>
+
         </div>
+      </div>
+
+      <!-- mobile nav -->
+      <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex flex-col items-center justify-start pt-24 px-6 transition-all duration-300 hidden">
+        <ul class="space-y-6 w-full text-center">
+          <li><a class="text-white text-xl font-semibold block" href="./index.html">Home</a></li>
+          <li><a class="text-white text-xl font-semibold block" href="./company.html">Company</a></li>
+          <li><a class="text-white text-xl font-semibold block" href="./pricing.html">Pricing</a></li>
+          <li><a class="text-white text-xl font-semibold block" href="./blog.html">Blog</a></li>
+          <li><a class="text-white text-xl font-semibold block" href="#">Contact Us</a></li>
+        </ul>
+        <a class="mt-8 p-2 px-6 bg-jungle-green rounded-full border border-gray text-black font-bold text-lg" href="#"><span class="inline-block rotate-90">&#10148</span> Get Paymon</a>
+        <button id="closeMenuBtn" class="mt-10 text-white text-3xl" aria-label="Close menu">&times;</button>
       </div>
     </header>
    </div>
@@ -512,9 +532,11 @@
          <div class="mx-[5%] md:mx-[8%] py-5">
           <!-- content div -->
            <div class="py-6 bg-chinese-black rounded-3xl text-center px-5">
-            <h5 class="text-whiteee font-semibold text-base">© Template by Themeflow - Powered by Webflow</h5>
+            <h5 class="text-whiteee font-semibold text-base">© Template by Themeflow - cloned and replicated</h5>
            </div>
          </div>
       </footer>
+
+      <script src="../public/js/script.js"></script>
 </body>
 </html>
